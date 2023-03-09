@@ -25,7 +25,7 @@ jobs:
 
       - name: Append test to file
         run: |
-          echo 'I ' >> test.txt
+          echo 'CHANGELOG ' >> test.txt
 
       - name: Output file
         run: |
