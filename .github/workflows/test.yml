@@ -1,0 +1,24 @@
+name: Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Output file
+        run: |
+          cat test.txt
+
+      - name: Append test to file
+        run: |
+          echo 'I ' >> test.txt
+
+      - name: Output file
+        run: |
+          cat test.txt    
